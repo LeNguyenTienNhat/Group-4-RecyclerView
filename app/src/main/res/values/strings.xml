@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">RecyclerView</string>
+    <string name="thumbnail_content_des">Thumbnail</string>
+    <string-array name="label">
+        <item>Pharmacy</item>
+        <item>Registry</item>
+        <item>Cartwheel</item>
+        <item>Clothing</item>
+        <item>Shoes</item>
+        <item>Accessories</item>
+        <item>Baby</item>
+        <item>Home</item>
+        <item>Patio and garden</item>
+    </string-array>
 </resources>
