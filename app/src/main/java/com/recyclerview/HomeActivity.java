@@ -1,5 +1,7 @@
 package com.recyclerview;
 
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -23,8 +25,20 @@ public class HomeActivity extends AppCompatActivity {
 
     private void setUpCategoryModel() {
         String[] categoryLabels = getResources().getStringArray(R.array.label);
+        int[] categoryThumbnail = {
+                R.drawable.blh,
+                R.drawable.gog,
+                R.drawable.grn,
+                R.drawable.hol,
+                R.drawable.med,
+                R.drawable.plc,
+                R.drawable.sme,
+                R.drawable.stv,
+                R.drawable.ths
+        };
+
         for (int i = 0; i < categoryLabels.length; i++) {
-            categoryList.add(new CategoryModel(R.drawable.thumb, categoryLabels[i]));
+            categoryList.add(new CategoryModel(categoryThumbnail[i], categoryLabels[i]));
         }
     }
 }

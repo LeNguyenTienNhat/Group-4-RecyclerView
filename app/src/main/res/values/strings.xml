@@ -2,14 +2,14 @@
     <string name="app_name">RecyclerView</string>
     <string name="thumbnail_content_des">Thumbnail</string>
     <string-array name="label">
-        <item>Pharmacy</item>
-        <item>Registry</item>
-        <item>Cartwheel</item>
-        <item>Clothing</item>
-        <item>Shoes</item>
-        <item>Accessories</item>
-        <item>Baby</item>
-        <item>Home</item>
-        <item>Patio and garden</item>
+        <item>Helmet</item>
+        <item>Goggles</item>
+        <item>Grenade</item>
+        <item>Optic</item>
+        <item>Med kit</item>
+        <item>Carrier</item>
+        <item>Smersh</item>
+        <item>Rifle</item>
+        <item>Headset</item>
     </string-array>
 </resources>
