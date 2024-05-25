@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">RecyclerView</string>
     <string name="thumbnail_content_des">Thumbnail</string>
+    <string name="shop">Shop</string>
+    <string name="featured">FEATURED</string>
+    <string name="deals">DEALS</string>
+    <string name="categories">CATEGORIES</string>
+    <string name="menu">menu</string>
+    <string name="cart">cart</string>
     <string-array name="label">
         <item>Helmet</item>
         <item>Goggles</item>

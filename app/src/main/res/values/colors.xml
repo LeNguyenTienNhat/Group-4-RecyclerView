@@ -5,4 +5,5 @@
     <color name="gray">#F5F5F5</color>
     <color name="dark_gray">#474747</color>
     <color name="red">#CE102C</color>
+    <color name="faded_white">#65FFFFFF</color>
 </resources>
