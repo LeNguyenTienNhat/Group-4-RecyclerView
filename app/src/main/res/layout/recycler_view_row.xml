@@ -39,11 +39,6 @@
                 android:textColor="@color/dark_gray"
                 android:background="@android:color/white"
                 android:textAlignment="center" />
-
-            <TextView
-                android:id="@+id/des"
-                android:layout_width="0dp"
-                android:layout_height="0dp"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

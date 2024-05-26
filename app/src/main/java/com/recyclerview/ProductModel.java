@@ -1,13 +1,17 @@
 package com.recyclerview;
-public class CategoryModel {
+public class ProductModel {
     int thumbnail;
     String label;
     String des;
+    String store;
+    String phoneNumber;
 
-    public CategoryModel(int thumbnail, String label, String des) {
+    public ProductModel(int thumbnail, String label, String des, String store, String phoneNumber) {
         this.thumbnail = thumbnail;
         this.label = label;
         this.des = des;
+        this.store = store;
+        this.phoneNumber = phoneNumber;
     }
 
     public int getThumbnail() {
@@ -21,4 +25,6 @@ public class CategoryModel {
     public String getDes() {
         return des;
     }
+    public String getStore() { return store; }
+    public String getPhoneNumber() { return phoneNumber; }
 }

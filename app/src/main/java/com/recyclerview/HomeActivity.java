@@ -21,25 +21,28 @@ public class HomeActivity extends AppCompatActivity {
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        ArrayList<CategoryModel> categoryList = setUpCategoryModels();
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, categoryList);
+        ArrayList<ProductModel> productList = setUpProductModels();
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, productList);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
     }
 
-    private ArrayList<CategoryModel> setUpCategoryModels() {
-        ArrayList<CategoryModel> categoryList = new ArrayList<>();
-        String[] categoryLabels = getResources().getStringArray(R.array.label);
-        String[] categoryDes = getResources().getStringArray(R.array.description);
-        int[] categoryThumbnail = {
+    private ArrayList<ProductModel> setUpProductModels() {
+        ArrayList<ProductModel> productList = new ArrayList<>();
+        String[] productLabels = getResources().getStringArray(R.array.label);
+        String[] productDes = getResources().getStringArray(R.array.description);
+        String[] productStore = getResources().getStringArray(R.array.store);
+        String[] productPhoneNumber = getResources().getStringArray(R.array.phoneNumber);
+        int[] productThumbnail = {
                 R.drawable.blh, R.drawable.gog, R.drawable.grn,
                 R.drawable.hol, R.drawable.med, R.drawable.plc,
                 R.drawable.sme, R.drawable.stv, R.drawable.ths
         };
-        for (int i = 0; i < categoryLabels.length; i++) {
-            categoryList.add(new CategoryModel(categoryThumbnail[i], categoryLabels[i], categoryDes[i]));
+        for (int i = 0; i < productLabels.length; i++) {
+            productList.add(new ProductModel(productThumbnail[i], productLabels[i],
+                    productDes[i], productStore[i], productPhoneNumber[i]));
         }
-        return categoryList;
+        return productList;
     }
 
     @Override

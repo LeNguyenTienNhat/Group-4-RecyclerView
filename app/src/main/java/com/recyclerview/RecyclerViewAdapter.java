@@ -15,8 +15,8 @@ import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
     Context context;
-    ArrayList<CategoryModel> categoryList;
-    public RecyclerViewAdapter(Context context, ArrayList<CategoryModel> categoryList) {
+    ArrayList<ProductModel> categoryList;
+    public RecyclerViewAdapter(Context context, ArrayList<ProductModel> categoryList) {
         this.context = context;
         this.categoryList = categoryList;
     }
@@ -32,7 +32,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewAdapter.MyViewHolder holder, int position) {
         holder.label.setText(categoryList.get(position).getLabel());
-        holder.des.setText(categoryList.get(position).getDes());
         holder.thumbnail.setImageResource(categoryList.get(position).getThumbnail());
         holder.thumbnail.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +40,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 intent.putExtra("thumbnailID", categoryList.get(holder.getAdapterPosition()).getThumbnail());
                 intent.putExtra("label", categoryList.get(holder.getAdapterPosition()).getLabel());
                 intent.putExtra("des", categoryList.get(holder.getAdapterPosition()).getDes());
+                intent.putExtra("store", categoryList.get(holder.getAdapterPosition()).getStore());
+                intent.putExtra("phoneNumber", categoryList.get(holder.getAdapterPosition()).getPhoneNumber());
                 context.startActivity(intent);
             }
         });
@@ -54,12 +55,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView thumbnail;
         TextView label;
-        TextView des;
         public MyViewHolder (@NonNull View itemView) {
             super(itemView);
             thumbnail = itemView.findViewById(R.id.thumbnail);
             label = itemView.findViewById(R.id.label);
-            des = itemView.findViewById(R.id.des);
         }
     }
 }
