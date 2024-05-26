@@ -1,15 +1,13 @@
 package com.recyclerview;
-
-import android.graphics.drawable.Drawable;
-
 public class CategoryModel {
     int thumbnail;
     String label;
+    String des;
 
-
-    public CategoryModel(int thumbnail, String label) {
+    public CategoryModel(int thumbnail, String label, String des) {
         this.thumbnail = thumbnail;
         this.label = label;
+        this.des = des;
     }
 
     public int getThumbnail() {
@@ -18,5 +16,9 @@ public class CategoryModel {
 
     public String getLabel() {
         return label;
+    }
+
+    public String getDes() {
+        return des;
     }
 }

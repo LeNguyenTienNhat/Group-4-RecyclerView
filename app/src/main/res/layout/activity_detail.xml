@@ -23,7 +23,6 @@
             android:src="@drawable/thumb"/>
         <TextView
             android:id="@+id/label"
-            android:text="Label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingVertical="8dp"
@@ -32,6 +31,24 @@
             android:textColor="@color/dark_gray"
             android:background="@android:color/white"
             android:textAlignment="center"/>
+        <TextView
+            android:id="@+id/des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8dp"
+            android:layout_marginTop="1dp"
+            android:textSize="12sp"
+            android:paddingHorizontal="15dp"
+            android:textColor="@color/dark_gray"
+            android:background="@android:color/white"
+            android:textAlignment="textStart"/>
+
+        <Button
+            android:text="@string/back"
+            android:id="@+id/back"
+            android:backgroundTint="@color/red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

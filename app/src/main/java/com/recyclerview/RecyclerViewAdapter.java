@@ -1,6 +1,7 @@
 package com.recyclerview;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.view.View;
@@ -31,7 +32,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewAdapter.MyViewHolder holder, int position) {
         holder.label.setText(categoryList.get(position).getLabel());
+        holder.des.setText(categoryList.get(position).getDes());
         holder.thumbnail.setImageResource(categoryList.get(position).getThumbnail());
+        holder.label.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DetailActivity.class);
+                intent.putExtra("thumbnailID", categoryList.get(holder.getAdapterPosition()).getThumbnail());
+                intent.putExtra("label", categoryList.get(holder.getAdapterPosition()).getLabel());
+                intent.putExtra("des", categoryList.get(holder.getAdapterPosition()).getDes());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -42,10 +54,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView thumbnail;
         TextView label;
+        TextView des;
         public MyViewHolder (@NonNull View itemView) {
             super(itemView);
             thumbnail = itemView.findViewById(R.id.thumbnail);
             label = itemView.findViewById(R.id.label);
+            des = itemView.findViewById(R.id.des);
         }
     }
 }
