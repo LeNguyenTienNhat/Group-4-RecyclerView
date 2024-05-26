@@ -34,7 +34,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.label.setText(categoryList.get(position).getLabel());
         holder.des.setText(categoryList.get(position).getDes());
         holder.thumbnail.setImageResource(categoryList.get(position).getThumbnail());
-        holder.label.setOnClickListener(new View.OnClickListener() {
+        holder.thumbnail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, DetailActivity.class);

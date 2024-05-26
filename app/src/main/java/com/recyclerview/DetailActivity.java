@@ -3,7 +3,7 @@ package com.recyclerview;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,7 +22,7 @@ public class DetailActivity extends AppCompatActivity {
         TextView label = findViewById(R.id.label);
         TextView des = findViewById(R.id.des);
         ImageView thumbnail = findViewById(R.id.thumbnail);
-        Button backBtn = findViewById(R.id.back);
+        ImageButton backBtn = findViewById(R.id.back);
 
         label.setText(labelData);
         des.setText(desData);

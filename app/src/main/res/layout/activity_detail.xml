@@ -13,6 +13,23 @@
         android:orientation="vertical"
         android:background="@android:color/darker_gray">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:background="@color/red">
+            <ImageButton
+                android:id="@+id/back"
+                style="@style/bar_component"
+                android:contentDescription="@string/back"
+                android:src="@drawable/arrow_back"/>
+            <ImageButton
+                android:id="@+id/options"
+                style="@style/bar_component"
+                android:contentDescription="@string/menu"
+                android:src="@drawable/outline_menu"
+                />
+        </LinearLayout>
+
         <ImageView
             android:id="@+id/thumbnail"
             android:background="@color/white"
@@ -23,32 +40,13 @@
             android:src="@drawable/thumb"/>
         <TextView
             android:id="@+id/label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="8dp"
-            android:layout_marginTop="1dp"
-            android:textSize="12sp"
-            android:textColor="@color/dark_gray"
-            android:background="@android:color/white"
-            android:textAlignment="center"/>
+            style="@style/detail_text_view"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-condensed-medium"/>
         <TextView
             android:id="@+id/des"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingVertical="8dp"
-            android:layout_marginTop="1dp"
-            android:textSize="12sp"
-            android:paddingHorizontal="15dp"
-            android:textColor="@color/dark_gray"
-            android:background="@android:color/white"
+            style="@style/detail_text_view"
             android:textAlignment="textStart"/>
-
-        <Button
-            android:text="@string/back"
-            android:id="@+id/back"
-            android:backgroundTint="@color/red"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,8 +6,9 @@
     <string name="deals">DEALS</string>
     <string name="categories">CATEGORIES</string>
     <string name="menu">menu</string>
-    <string name="cart">cart</string>
+    <string name="cart">Cart</string>
     <string name="back">Back</string>
+    <string name="search">Search</string>
     <string-array name="label">
         <item>Helmet</item>
         <item>Goggles</item>
